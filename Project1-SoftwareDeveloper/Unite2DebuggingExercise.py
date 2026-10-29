@@ -1,31 +1,71 @@
-#  Unit2
 
-# step one: setting up my basic variables here
-student_name = "Charlie"  # my name string
-my_current_age = 19       # my age as a whole number
-my_exact_height = 1.78    # height in meters as a float decimal
+# My Python practice script for Unit Two
 
-# step two: printing everything nicely together in one go
-print("Hey there, my name is " + student_name + ", I am " + str(my_current_age) + " years old, and my height is " + str(my_exact_height) + " meters.")
+# Step 1: Store my name as text
+student_name = "Charlie"
 
-# step three part one: figure out age in months
-months_old = my_current_age * 12  # multiply years by 12 months
-print("If you want my age in months, it comes out to:", months_old)
+# Store my age as a whole number
+my_current_age = 19
 
-# step three part two: adding ten to height (let's use cm this time)
-height_in_centimeters = 178.0  # converted to cm for easier addition
-new_tallness = height_in_centimeters + 10  # adding 10 cm
-print("Adding ten centimeters gives us:", new_tallness)
+# Store my height as a decimal number in metres
+my_exact_height = 1.78
 
-# step four: checking if age is greater than eighteen
-is_adult_check = my_current_age > 18  # this should give a boolean True or False
-print("Is the age greater than eighteen?", is_adult_check)
 
-# step five: turning the float height into a normal integer
-whole_number_height = int(my_exact_height)  # strips the decimal part away
-print("Changing the float height into an int gives:", whole_number_height)
+# Step 2: Display my personal information
+# str() converts numbers into text so they can be joined together
+print("Hello, my name is " + student_name
+      + ", I am " + str(my_current_age)
+      + " years old, and my height is "
+      + str(my_exact_height) + " metres.")
 
-# step six: making a type error on purpose and then fixing it
-# note: doing print("Age next year: " + 20) crashed with a TypeError!
-# fixed version below:
-print("Next year I will be: " + str(my_current_age + 1))  # wrapped the number in str() so it matches
+
+# Step 3: Calculate my age in months
+# There are 12 months in one year
+months_old = my_current_age * 12
+
+# Display my age in months
+print("My age in months is:", months_old)
+
+
+# Step 4: Convert my height from metres to centimetres
+# Multiply the height in metres by 100
+height_in_centimeters = my_exact_height * 100
+
+# Add 10 centimetres to my height
+new_tallness = height_in_centimeters + 10
+
+# Display the new height in centimetres
+print("My height plus 10 cm is:", new_tallness, "cm")
+
+
+# Step 5: Check whether I am older than 18
+# The result will be either True or False
+is_adult_check = my_current_age > 18
+
+# Display the result of the age check
+print("Is my age greater than 18?", is_adult_check)
+
+
+# Step 6: Convert my height into a whole number
+# int() removes the decimal part; it does not round the number
+whole_number_height = int(my_exact_height)
+
+# Display the converted height value
+print("My height converted to an integer is:",
+      whole_number_height)
+
+
+# Step 7: Calculate my age next year
+# Add 1 to my current age
+next_year_age = my_current_age + 1
+
+# Display my age next year
+print("Next year I will be:", next_year_age)
+
+
+# Step 8: Practise converting a number into text
+# Joining text and a number directly causes a TypeError
+# Example of incorrect code: "My age is " + my_current_age
+
+# Convert my age into text using str()
+print("My age as text is " + str(my_current_age))
